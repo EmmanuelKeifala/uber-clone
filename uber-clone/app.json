@@ -11,17 +11,29 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.uberclone",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDsY8d-AjmdQ6hgjYgm2nqyrFw82oQyQH8k"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDsY8d-AjmdQ6hgjYgm2nqyrFw82oQyQH8"
+        },
+        "permissions": [
+          "ACCESS_COARSE_LOCATION",
+          "ACCESS_FINE_LOCATION",
+          "FOREGROUND_SERVICE"
+        ]
+      },
+      "package": "com.uberclone"
     },
     "web": {
       "favicon": "./assets/favicon.png"
