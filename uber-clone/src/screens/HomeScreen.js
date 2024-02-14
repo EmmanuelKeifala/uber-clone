@@ -17,7 +17,7 @@ import {StatusBar} from 'expo-status-bar';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import numberToWords from '../lib/NumberToWords';
 import {mapStyle} from '../globals/mapStyle';
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const [latlng, setLatLng] = useState({});
   const _map = useRef(1);
   const checkPermission = async () => {
@@ -69,7 +69,10 @@ const HomeScreen = () => {
               <Text style={styles.text2}>
                 Read a book.Take a nap. Stare out the window
               </Text>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('RequestScreen', {state: 0});
+                }}>
                 <View style={styles.button1}>
                   <Text style={styles.button1Text}>Ride with Uber</Text>
                 </View>
